@@ -10,7 +10,42 @@ The SDK provides convenient access to the [Currency API](https://moatsystems.com
 ### Usage Example
 
 ```go
+// main.go
+package main
 
+import (
+	"fmt"
+	"currensees"
+)
+
+func main() {
+	// Authentication
+	username := "your_username"
+	password := "your_password"
+
+	authResponse := currensees.Authenticate(username, password)
+	fmt.Println("Authentication Response:")
+	fmt.Println(authResponse)
+
+	// Currency Conversion
+	date := "2023_04_02"
+	baseCurrency := "GBP"
+	targetCurrency := "CAD"
+	amount := "500"
+
+	convertResponse := currensees.Convert(date, baseCurrency, targetCurrency, amount)
+	fmt.Println("Currency Conversion Response:")
+	fmt.Println(convertResponse)
+
+	// Convert All Currencies
+	baseCurrencyAll := "GBP"
+	amountAll := "120"
+	dateAll := "2023_04_02"
+
+	convertAllResponse := currensees.ConvertAll(baseCurrencyAll, amountAll, dateAll)
+	fmt.Println("Currency Conversion for All Currencies Response:")
+	fmt.Println(convertAllResponse)
+}
 ```
 
 ### Setting up Currency API Account
