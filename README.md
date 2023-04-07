@@ -45,6 +45,25 @@ func main() {
 	convertAllResponse := currensees.ConvertAll(baseCurrencyAll, amountAll, dateAll)
 	fmt.Println("Currency Conversion for All Currencies Response:")
 	fmt.Println(convertAllResponse)
+
+	// Retrieve All Currencies
+	username := "your_username"
+	day := "02"
+	month := "04"
+	year := "2023"
+
+	response := currensees.GetCurrencies(username, day, month, year)
+	fmt.Println(response)
+
+	// Retrieve a currency by UUID
+	uuid := "your_uuid"
+	username := "your_username"
+	day := "02"
+	month := "04"
+	year := "2023"
+
+	response := currensees.GetCurrencyByUUID(uuid, username, day, month, year)
+	fmt.Println(response)
 }
 ```
 
