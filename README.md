@@ -64,6 +64,27 @@ func main() {
 
 	response := currensees.GetCurrencyByUUID(uuid, username, day, month, year)
 	fmt.Println(response)
+
+	// Retrieve All Historical Currencies
+	username := "your_username"
+	date := "2023_04_02"
+	day := "02"
+	month := "04"
+	year := "2023"
+
+	response := currensees.GetHistorical(username, date, day, month, year)
+	fmt.Println(response)
+
+	// Retrieve a historical currency by UUID
+	uuid := "your_uuid"
+	username := "your_username"
+	day := "02"
+	month := "04"
+	year := "2023"
+	date := "2023_04_02"
+
+	response := currensees.GetHistoricalByUUID(uuid, username, day, month, year, date)
+	fmt.Println(response)
 }
 ```
 
