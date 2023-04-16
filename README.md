@@ -85,6 +85,17 @@ func main() {
 
 	response := currensees.GetHistoricalByUUID(uuid, username, day, month, year, date)
 	fmt.Println(response)
+
+	// Retrieve the daily average for a particular date
+	date := "2023_04_10"
+	response := currensees.DailyAverage(date)
+	fmt.Println(response)
+
+	// Retrieve the weekly average for a date range
+	from_date := "2023_04_03"
+	to_date := "2023_04_07"
+	response := currensees.WeeklyAverage(from_date, to_date)
+	fmt.Println(response)
 }
 ```
 
