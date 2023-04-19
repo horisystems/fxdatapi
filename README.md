@@ -23,12 +23,18 @@ func main() {
 	username := "your_username"
 	password := "your_password"
 
+	day := "02"
+	month := "04"
+	year := "2023"
+	date := "2023_04_02"
+	from_date := "2023_04_03"
+	to_date := "2023_04_07"
+
 	authResponse := currensees.Authenticate(username, password)
 	fmt.Println("Authentication Response:")
 	fmt.Println(authResponse)
 
 	// Currency Conversion
-	date := "2023_04_02"
 	baseCurrency := "GBP"
 	targetCurrency := "CAD"
 	amount := "500"
@@ -47,55 +53,39 @@ func main() {
 	fmt.Println(convertAllResponse)
 
 	// Retrieve All Currencies
-	username := "your_username"
-	day := "02"
-	month := "04"
-	year := "2023"
-
 	response := currensees.GetCurrencies(username, day, month, year)
 	fmt.Println(response)
 
 	// Retrieve a currency by UUID
 	uuid := "your_uuid"
-	username := "your_username"
-	day := "02"
-	month := "04"
-	year := "2023"
-
 	response := currensees.GetCurrencyByUUID(uuid, username, day, month, year)
 	fmt.Println(response)
 
 	// Retrieve All Historical Currencies
-	username := "your_username"
-	date := "2023_04_02"
-	day := "02"
-	month := "04"
-	year := "2023"
-
 	response := currensees.GetHistorical(username, date, day, month, year)
 	fmt.Println(response)
 
 	// Retrieve a historical currency by UUID
 	uuid := "your_uuid"
-	username := "your_username"
-	day := "02"
-	month := "04"
-	year := "2023"
-	date := "2023_04_02"
-
 	response := currensees.GetHistoricalByUUID(uuid, username, day, month, year, date)
 	fmt.Println(response)
 
 	// Retrieve the daily average for a particular date
-	date := "2023_04_10"
 	response := currensees.DailyAverage(date)
 	fmt.Println(response)
 
 	// Retrieve the weekly average for a date range
-	from_date := "2023_04_03"
-	to_date := "2023_04_07"
 	response := currensees.WeeklyAverage(from_date, to_date)
 	fmt.Println(response)
+
+	// Get all margins and spreads for a specific date
+	allMarginsSpreads := currensees.GetMarginsSpreads(username, day, month, year)
+	fmt.Println("All Margins and Spreads:", allMarginsSpreads)
+
+	// Get margins and spreads by UUID
+	uuid := "your_uuid"
+	marginsSpreadsByUUID := currensees.GetMarginsSpreadsByUUID(uuid, username, day, month, year)
+	fmt.Println("Margins and Spreads by UUID:", marginsSpreadsByUUID)
 }
 ```
 
@@ -105,7 +95,7 @@ Subscribe [here](https://moatsystems.com/currency-api/) for a user account.
 
 ### Using the Currency API
 
-You can read the [API documentation](https://docs.currensees.com/) to understand what’s possible with the Currency API. If you need further assistance, don’t hesitate to [contact us](https://moatsystems.com/contact/).
+You can read the [API documentation](https://docs.currensees.com/) to understand what's possible with the Currency API. If you need further assistance, don't hesitate to [contact us](https://moatsystems.com/contact/).
 
 ### License
 
