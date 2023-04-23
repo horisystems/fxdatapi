@@ -8,16 +8,17 @@ import (
 	"strings"
 )
 
-func Convert(date, baseCurrency, targetCurrency, amount string) string {
+func Convert(username, date, baseCurrency, targetCurrency, amount string) string {
 	url := "https://currensees.com/v1/convert"
 	method := "POST"
 
 	payload := strings.NewReader(fmt.Sprintf(`{
+  "username": "%s",
   "date": "%s",
   "base_currency": "%s",
   "target_currency": "%s",
   "amount": "%s"
-}`, date, baseCurrency, targetCurrency, amount))
+}`, username, date, baseCurrency, targetCurrency, amount))
 
 	client := &http.Client{}
 	req, err := http.NewRequest(method, url, payload)

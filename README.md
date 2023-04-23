@@ -39,7 +39,7 @@ func main() {
 	targetCurrency := "CAD"
 	amount := "500"
 
-	convertResponse := currensees.Convert(date, baseCurrency, targetCurrency, amount)
+	convertResponse := currensees.Convert(username, date, baseCurrency, targetCurrency, amount)
 	fmt.Println("Currency Conversion Response:")
 	fmt.Println(convertResponse)
 
@@ -48,7 +48,7 @@ func main() {
 	amountAll := "120"
 	dateAll := "2023_04_02"
 
-	convertAllResponse := currensees.ConvertAll(baseCurrencyAll, amountAll, dateAll)
+	convertAllResponse := currensees.ConvertAll(username, baseCurrencyAll, amountAll, dateAll)
 	fmt.Println("Currency Conversion for All Currencies Response:")
 	fmt.Println(convertAllResponse)
 
@@ -57,7 +57,7 @@ func main() {
 	fmt.Println(response)
 
 	// Retrieve a currency by UUID
-	uuid := "your_uuid"
+	uuid := "currencies_uuid"
 	response := currensees.GetCurrencyByUUID(uuid, username, day, month, year)
 	fmt.Println(response)
 
@@ -66,7 +66,7 @@ func main() {
 	fmt.Println(response)
 
 	// Retrieve a historical currency by UUID
-	uuid := "your_uuid"
+	uuid := "historical_uuid"
 	response := currensees.GetHistoricalByUUID(uuid, username, day, month, year, date)
 	fmt.Println(response)
 
@@ -83,7 +83,7 @@ func main() {
 	fmt.Println("All Margins and Spreads:", allMarginsSpreads)
 
 	// Get margins and spreads by UUID
-	uuid := "your_uuid"
+	uuid := "margins_spreads_uuid"
 	marginsSpreadsByUUID := currensees.GetMarginsSpreadsByUUID(uuid, username, day, month, year)
 	fmt.Println("Margins and Spreads by UUID:", marginsSpreadsByUUID)
 }
