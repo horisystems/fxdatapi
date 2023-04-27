@@ -86,6 +86,28 @@ func main() {
 	uuid := "margins_spreads_uuid"
 	marginsSpreadsByUUID := currensees.GetMarginsSpreadsByUUID(uuid, username, day, month, year)
 	fmt.Println("Margins and Spreads by UUID:", marginsSpreadsByUUID)
+
+	// Get all performances
+	allPerformances := currensees.GetPerformances(username)
+	fmt.Println("All Performances:")
+	fmt.Println(allPerformances)
+
+	// Get performance by UUID
+	performanceUUID := "performance_uuid"
+	performanceByUUID := currensees.GetPerformanceByUUID(performanceUUID, username)
+	fmt.Println("Performance by UUID:")
+	fmt.Println(performanceByUUID)
+
+	// Get all signals
+	allSignals := currensees.GetSignals(username)
+	fmt.Println("All Signals:")
+	fmt.Println(allSignals)
+
+	// Get signal by UUID
+	signalUUID := "signal_uuid"
+	signalByUUID := currensees.GetSignalByUUID(signalUUID, username)
+	fmt.Println("Signal by UUID:")
+	fmt.Println(signalByUUID)
 }
 ```
 
