@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.6 - 2023-04-27
+* Performances.go and Signals.go
+
+....
+
 ## 1.0.2 - 2023-04-07
 * v1.0.2 Released
 
