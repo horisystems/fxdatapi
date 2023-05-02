@@ -78,6 +78,10 @@ func main() {
 	response := currensees.WeeklyAverage(from_date, to_date)
 	fmt.Println(response)
 
+	// Retrieve the monthly average for a specific month and year
+	response := currensees.MonthlyAverage(year, month)
+	fmt.Println(response)
+
 	// Get all margins and spreads for a specific date
 	allMarginsSpreads := currensees.GetMarginsSpreads(username, day, month, year)
 	fmt.Println("All Margins and Spreads:", allMarginsSpreads)
