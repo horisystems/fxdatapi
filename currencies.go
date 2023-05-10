@@ -1,5 +1,5 @@
 // currencies.go
-package currensees
+package fxdatapi
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 )
 
 func GetCurrencies(username, day, month, year string) string {
-	url := fmt.Sprintf("https://currensees.com/v1/currencies?username=%s&day=%s&month=%s&year=%s", username, day, month, year)
+	url := fmt.Sprintf("https://fxdatapi.com/v1/currencies?username=%s&day=%s&month=%s&year=%s", username, day, month, year)
 	method := "GET"
 
 	client := &http.Client{}
@@ -36,7 +36,7 @@ func GetCurrencies(username, day, month, year string) string {
 }
 
 func GetCurrencyByUUID(uuid, username, day, month, year string) string {
-	url := fmt.Sprintf("https://currensees.com/v1/currencies/%s?username=%s&day=%s&month=%s&year=%s", uuid, username, day, month, year)
+	url := fmt.Sprintf("https://fxdatapi.com/v1/currencies/%s?username=%s&day=%s&month=%s&year=%s", uuid, username, day, month, year)
 	method := "GET"
 
 	client := &http.Client{}

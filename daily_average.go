@@ -1,4 +1,4 @@
-package currensees
+package fxdatapi
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 )
 
 func DailyAverage(date string) {
-	url := "https://currensees.com/v1/daily_average/" + date
+	url := "https://fxdatapi.com/v1/daily_average/" + date
 	method := "GET"
 
 	payload := strings.NewReader(``)

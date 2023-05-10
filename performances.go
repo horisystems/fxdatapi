@@ -1,5 +1,5 @@
 // performances.go
-package currensees
+package fxdatapi
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 )
 
 func GetPerformances(username string) string {
-	url := fmt.Sprintf("https://currensees.com/v1/performances?username=%s", username)
+	url := fmt.Sprintf("https://fxdatapi.com/v1/performances?username=%s", username)
 	method := "GET"
 
 	client := &http.Client{}
@@ -37,7 +37,7 @@ func GetPerformances(username string) string {
 }
 
 func GetPerformanceByUUID(uuid, username string) string {
-	url := fmt.Sprintf("https://currensees.com/v1/performances/%s?username=%s", uuid, username)
+	url := fmt.Sprintf("https://fxdatapi.com/v1/performances/%s?username=%s", uuid, username)
 	method := "GET"
 
 	client := &http.Client{}

@@ -1,4 +1,4 @@
-package currensees
+package fxdatapi
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 )
 
 func MonthlyAverage(year, month string) {
-	url := "https://currensees.com/v1/monthly_average/" + year + "/" + month
+	url := "https://fxdatapi.com/v1/monthly_average/" + year + "/" + month
 	method := "GET"
 
 	payload := strings.NewReader(``)

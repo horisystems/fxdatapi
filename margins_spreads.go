@@ -1,5 +1,5 @@
 // margins_spreads.go
-package currensees
+package fxdatapi
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 )
 
 func GetMarginsSpreads(username, day, month, year string) string {
-	url := fmt.Sprintf("https://currensees.com/v1/margins_spreads?username=%s&day=%s&month=%s&year=%s", username, day, month, year)
+	url := fmt.Sprintf("https://fxdatapi.com/v1/margins_spreads?username=%s&day=%s&month=%s&year=%s", username, day, month, year)
 	method := "GET"
 
 	client := &http.Client{}
@@ -37,7 +37,7 @@ func GetMarginsSpreads(username, day, month, year string) string {
 }
 
 func GetMarginsSpreadsByUUID(uuid, username, day, month, year string) string {
-	url := fmt.Sprintf("https://currensees.com/v1/margins_spreads/%s?username=%s&day=%s&month=%s&year=%s", uuid, username, day, month, year)
+	url := fmt.Sprintf("https://fxdatapi.com/v1/margins_spreads/%s?username=%s&day=%s&month=%s&year=%s", uuid, username, day, month, year)
 	method := "GET"
 
 	client := &http.Client{}

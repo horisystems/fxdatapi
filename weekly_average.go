@@ -1,4 +1,4 @@
-package currensees
+package fxdatapi
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 )
 
 func WeeklyAverage(from_date, to_date string) {
-	url := "https://currensees.com/v1/weekly_average/" + from_date + "/" + to_date
+	url := "https://fxdatapi.com/v1/weekly_average/" + from_date + "/" + to_date
 	method := "GET"
 
 	payload := strings.NewReader(``)

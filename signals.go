@@ -1,5 +1,5 @@
 // signals.go
-package currensees
+package fxdatapi
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 )
 
 func GetSignals(username string) string {
-	url := fmt.Sprintf("https://currensees.com/v1/signals?username=%s", username)
+	url := fmt.Sprintf("https://fxdatapi.com/v1/signals?username=%s", username)
 	method := "GET"
 
 	client := &http.Client{}
@@ -37,7 +37,7 @@ func GetSignals(username string) string {
 }
 
 func GetSignalByUUID(uuid, username string) string {
-	url := fmt.Sprintf("https://currensees.com/v1/signals/%s?username=%s", uuid, username)
+	url := fmt.Sprintf("https://fxdatapi.com/v1/signals/%s?username=%s", uuid, username)
 	method := "GET"
 
 	client := &http.Client{}

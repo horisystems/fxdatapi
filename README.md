@@ -1,9 +1,9 @@
 ## Currency API Go SDK
 
-[![Release](https://img.shields.io/github/release/moatsystems/currensees.svg)](https://github.com/moatsystems/currensees/releases/latest)
-[![Go Report Card](https://goreportcard.com/badge/github.com/moatsystems/currensees)](https://goreportcard.com/report/github.com/moatsystems/currensees)
-[![Go Reference](https://pkg.go.dev/badge/github.com/moatsystems/currensees.svg)](https://pkg.go.dev/github.com/moatsystems/currensees)
-[![License](https://img.shields.io/github/license/moatsystems/currensees)](/LICENSE)
+[![Release](https://img.shields.io/github/release/moatsystems/fxdatapi.svg)](https://github.com/moatsystems/fxdatapi/releases/latest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/moatsystems/fxdatapi)](https://goreportcard.com/report/github.com/moatsystems/fxdatapi)
+[![Go Reference](https://pkg.go.dev/badge/github.com/moatsystems/fxdatapi.svg)](https://pkg.go.dev/github.com/moatsystems/fxdatapi)
+[![License](https://img.shields.io/github/license/moatsystems/fxdatapi)](/LICENSE)
 
 The SDK provides convenient access to the [Currency API](https://moatsystems.com/currency-api/) for applications written in the [Go](https://go.dev/) Programming Language.
 
@@ -15,7 +15,7 @@ package main
 
 import (
 	"fmt"
-	"currensees"
+	"fxdatapi"
 )
 
 func main() {
@@ -30,7 +30,7 @@ func main() {
 	from_date := "2023_04_03"
 	to_date := "2023_04_07"
 
-	authResponse := currensees.Authenticate(username, password)
+	authResponse := fxdatapi.Authenticate(username, password)
 	fmt.Println("Authentication Response:")
 	fmt.Println(authResponse)
 
@@ -39,7 +39,7 @@ func main() {
 	targetCurrency := "CAD"
 	amount := "500"
 
-	convertResponse := currensees.Convert(username, date, baseCurrency, targetCurrency, amount)
+	convertResponse := fxdatapi.Convert(username, date, baseCurrency, targetCurrency, amount)
 	fmt.Println("Currency Conversion Response:")
 	fmt.Println(convertResponse)
 
@@ -48,68 +48,68 @@ func main() {
 	amountAll := "120"
 	dateAll := "2023_04_02"
 
-	convertAllResponse := currensees.ConvertAll(username, baseCurrencyAll, amountAll, dateAll)
+	convertAllResponse := fxdatapi.ConvertAll(username, baseCurrencyAll, amountAll, dateAll)
 	fmt.Println("Currency Conversion for All Currencies Response:")
 	fmt.Println(convertAllResponse)
 
 	// Retrieve All Currencies
-	response := currensees.GetCurrencies(username, day, month, year)
+	response := fxdatapi.GetCurrencies(username, day, month, year)
 	fmt.Println(response)
 
 	// Retrieve a currency by UUID
 	uuid := "currencies_uuid"
-	response := currensees.GetCurrencyByUUID(uuid, username, day, month, year)
+	response := fxdatapi.GetCurrencyByUUID(uuid, username, day, month, year)
 	fmt.Println(response)
 
 	// Retrieve All Historical Currencies
-	response := currensees.GetHistorical(username, date, day, month, year)
+	response := fxdatapi.GetHistorical(username, date, day, month, year)
 	fmt.Println(response)
 
 	// Retrieve a historical currency by UUID
 	uuid := "historical_uuid"
-	response := currensees.GetHistoricalByUUID(uuid, username, day, month, year, date)
+	response := fxdatapi.GetHistoricalByUUID(uuid, username, day, month, year, date)
 	fmt.Println(response)
 
 	// Retrieve the daily average for a particular date
-	response := currensees.DailyAverage(date)
+	response := fxdatapi.DailyAverage(date)
 	fmt.Println(response)
 
 	// Retrieve the weekly average for a date range
-	response := currensees.WeeklyAverage(from_date, to_date)
+	response := fxdatapi.WeeklyAverage(from_date, to_date)
 	fmt.Println(response)
 
 	// Retrieve the monthly average for a specific month and year
-	response := currensees.MonthlyAverage(year, month)
+	response := fxdatapi.MonthlyAverage(year, month)
 	fmt.Println(response)
 
 	// Get all margins and spreads for a specific date
-	allMarginsSpreads := currensees.GetMarginsSpreads(username, day, month, year)
+	allMarginsSpreads := fxdatapi.GetMarginsSpreads(username, day, month, year)
 	fmt.Println("All Margins and Spreads:", allMarginsSpreads)
 
 	// Get margins and spreads by UUID
 	uuid := "margins_spreads_uuid"
-	marginsSpreadsByUUID := currensees.GetMarginsSpreadsByUUID(uuid, username, day, month, year)
+	marginsSpreadsByUUID := fxdatapi.GetMarginsSpreadsByUUID(uuid, username, day, month, year)
 	fmt.Println("Margins and Spreads by UUID:", marginsSpreadsByUUID)
 
 	// Get all performances
-	allPerformances := currensees.GetPerformances(username)
+	allPerformances := fxdatapi.GetPerformances(username)
 	fmt.Println("All Performances:")
 	fmt.Println(allPerformances)
 
 	// Get performance by UUID
 	performanceUUID := "performance_uuid"
-	performanceByUUID := currensees.GetPerformanceByUUID(performanceUUID, username)
+	performanceByUUID := fxdatapi.GetPerformanceByUUID(performanceUUID, username)
 	fmt.Println("Performance by UUID:")
 	fmt.Println(performanceByUUID)
 
 	// Get all signals
-	allSignals := currensees.GetSignals(username)
+	allSignals := fxdatapi.GetSignals(username)
 	fmt.Println("All Signals:")
 	fmt.Println(allSignals)
 
 	// Get signal by UUID
 	signalUUID := "signal_uuid"
-	signalByUUID := currensees.GetSignalByUUID(signalUUID, username)
+	signalByUUID := fxdatapi.GetSignalByUUID(signalUUID, username)
 	fmt.Println("Signal by UUID:")
 	fmt.Println(signalByUUID)
 }
@@ -121,7 +121,7 @@ Subscribe [here](https://moatsystems.com/currency-api/) for a user account.
 
 ### Using the Currency API
 
-You can read the [API documentation](https://docs.currensees.com/) to understand what's possible with the Currency API. If you need further assistance, don't hesitate to [contact us](https://moatsystems.com/contact/).
+You can read the [API documentation](https://docs.fxdatapi.com/) to understand what's possible with the Currency API. If you need further assistance, don't hesitate to [contact us](https://moatsystems.com/contact/).
 
 ### License
 

@@ -1,5 +1,5 @@
 // auth.go
-package currensees
+package fxdatapi
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 )
 
 func Authenticate(username, password string) string {
-	url := "https://currensees.com/v1/login"
+	url := "https://fxdatapi.com/v1/login"
 	method := "POST"
 
 	payload := strings.NewReader(fmt.Sprintf(`{

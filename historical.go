@@ -1,5 +1,5 @@
 // historical.go
-package currensees
+package fxdatapi
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 )
 
 func GetHistorical(username, date, day, month, year string) string {
-	url := fmt.Sprintf("https://currensees.com/v1/historical?username=%s&date=%s&day=%s&month=%s&year=%s", username, date, day, month, year)
+	url := fmt.Sprintf("https://fxdatapi.com/v1/historical?username=%s&date=%s&day=%s&month=%s&year=%s", username, date, day, month, year)
 	method := "GET"
 
 	client := &http.Client{}
@@ -36,7 +36,7 @@ func GetHistorical(username, date, day, month, year string) string {
 }
 
 func GetHistoricalByUUID(uuid, username, day, month, year, date string) string {
-	url := fmt.Sprintf("https://currensees.com/v1/historical/%s?username=%s&day=%s&month=%s&year=%s&date_string=%s", uuid, username, day, month, year, date)
+	url := fmt.Sprintf("https://fxdatapi.com/v1/historical/%s?username=%s&day=%s&month=%s&year=%s&date_string=%s", uuid, username, day, month, year, date)
 	method := "GET"
 
 	client := &http.Client{}

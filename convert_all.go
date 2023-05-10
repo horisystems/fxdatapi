@@ -1,5 +1,5 @@
 // convert_all.go
-package currensees
+package fxdatapi
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 )
 
 func ConvertAll(username, baseCurrency, amount, date string) string {
-	url := "https://currensees.com/v1/convert_all"
+	url := "https://fxdatapi.com/v1/convert_all"
 	method := "POST"
 
 	payload := strings.NewReader(fmt.Sprintf(`{
