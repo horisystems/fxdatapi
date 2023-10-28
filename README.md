@@ -1,11 +1,11 @@
 ## Currency API Go SDK
 
-[![Release](https://img.shields.io/github/release/moatsystems/fxdatapi.svg)](https://github.com/moatsystems/fxdatapi/releases/latest)
-[![Go Report Card](https://goreportcard.com/badge/github.com/moatsystems/fxdatapi)](https://goreportcard.com/report/github.com/moatsystems/fxdatapi)
-[![Go Reference](https://pkg.go.dev/badge/github.com/moatsystems/fxdatapi.svg)](https://pkg.go.dev/github.com/moatsystems/fxdatapi)
-[![License](https://img.shields.io/github/license/moatsystems/fxdatapi)](/LICENSE)
+[![Release](https://img.shields.io/github/release/horisystems/fxdatapi.svg)](https://github.com/horisystems/fxdatapi/releases/latest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/horisystems/fxdatapi)](https://goreportcard.com/report/github.com/horisystems/fxdatapi)
+[![Go Reference](https://pkg.go.dev/badge/github.com/horisystems/fxdatapi.svg)](https://pkg.go.dev/github.com/horisystems/fxdatapi)
+[![License](https://img.shields.io/github/license/horisystems/fxdatapi)](/LICENSE)
 
-The SDK provides convenient access to the [Currency API](https://moatsystems.com/currency-api/) for applications written in the [Go](https://go.dev/) Programming Language.
+The SDK provides convenient access to the [Currency API](https://horisystems.com/currency-api/) for applications written in the [Go](https://go.dev/) Programming Language.
 
 ### Usage Example
 
@@ -117,11 +117,11 @@ func main() {
 
 ### Setting up Currency API Account
 
-Subscribe [here](https://moatsystems.com/currency-api/) for a user account.
+Subscribe [here](https://horisystems.com/currency-api/) for a user account.
 
 ### Using the Currency API
 
-You can read the [API documentation](https://docs.fxdatapi.com/) to understand what's possible with the Currency API. If you need further assistance, don't hesitate to [contact us](https://moatsystems.com/contact/).
+You can read the [API documentation](https://docs.fxdatapi.com/) to understand what's possible with the Currency API. If you need further assistance, don't hesitate to [contact us](https://horisystems.com/contact/).
 
 ### License
 
@@ -129,4 +129,4 @@ This project is licensed under the [BSD 3-Clause License](./LICENSE).
 
 ### Copyright
 
-(c) 2023 [Moat Systems Limited](https://moatsystems.com).
+(c) 2023 [Hori Systems Limited](https://horisystems.com).

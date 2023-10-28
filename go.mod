@@ -1,3 +1,3 @@
-module github.com/moatsystems/fxdatapi
+module github.com/horisystems/fxdatapi
 
 go 1.20

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.9 - 2023-10-28
+* Business changes
+
+## 1.0.8 - 2023-05-10
+* v1.0.8 Released
+
 ## 1.0.7 - 2023-05-02
 * Monthly_average.go and README.md
 
